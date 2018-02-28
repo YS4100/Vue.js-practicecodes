@@ -1,0 +1,70 @@
+1.)Basic code which displays a message
+
+<html>
+
+   <head>
+
+      <title>VueJs Introduction</title>
+
+      <script type = "text/javascript" src = "https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.3/vue.min.js">
+
+      </script>
+
+   </head>
+
+   <body>
+
+      <div id = "intro" style = "text-align:center;">
+
+         <h1>{{ message }}</h1>
+
+      </div>
+
+      <script type = "text/javascript">
+
+         var vue_det = new Vue({
+
+            el: '#intro',
+
+            data: {
+
+               message: 'My first program of Vue.js'
+
+            }
+
+         });
+
+      </script>
+
+   </body>
+
+</html> 
+
+
+2.)Displays the text entered by the user in the container
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    
+    <div id="container">
+      <input type="text" id="container" placeholder="enter text" v-model="value">
+      <p>{{ value }}</p>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/0.11.10/vue.min.js"></script>
+    <script>
+      
+      new Vue({
+        el: '#container',
+        data: {
+          value: '',
+        },
+      });
+      
+    </script>
+    
+  </body>
+</html>
